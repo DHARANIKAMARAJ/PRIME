@@ -1,0 +1,26 @@
+#include <stdio.h>
+int prime(int n,int i)
+{
+    static int count=0;
+    if(i>n)
+    return;
+    if(n%i==0)
+    count++;
+    prime(n,i+1);
+    return count;
+    
+}
+int main()
+{
+    int n,i=1;
+    scanf("%d",&n);
+    int a=prime(n,i);
+    if(a==2)
+    printf("PRIME");
+    else
+    printf("NOT PRIME");
+    
+
+    return 0;
+}
+
